@@ -223,12 +223,12 @@ function kiyoh_settings_page() {
 			<tr valign="top">
 				<th scope="row">Email template (English)</th>
 				<td>
-					<?php wp_editor(str_replace("\n", '<br />', get_option('kiyoh_option_tmpl_en')), 'kiyoh_option_tmpl_en', array( 'media_buttons' => false,'quicktags' => false ) ); ?>
+					<?php wp_editor(str_replace("\n", '<br />', get_option('kiyoh_option_tmpl_en')), 'kiyoh_option_tmpl_en', array( 'media_buttons' => true,'quicktags' => false ) ); ?>
 				</td>
 			</tr>
 			<tr valign="top">
 				<th scope="row">Email template (Dutch)</th>
-				<td><?php wp_editor(str_replace("\n", '<br />', get_option('kiyoh_option_tmpl_du')), 'kiyoh_option_tmpl_du', array( 'media_buttons' => false,'quicktags' => false, 'editor_css' => true ) ); ?></td>
+				<td><?php wp_editor(str_replace("\n", '<br />', get_option('kiyoh_option_tmpl_du')), 'kiyoh_option_tmpl_du', array( 'media_buttons' => true,'quicktags' => false, 'editor_css' => true ) ); ?></td>
 			</tr>
 		</table>
 		<?php submit_button(); ?>

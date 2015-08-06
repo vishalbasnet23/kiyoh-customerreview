@@ -53,7 +53,7 @@ if (is_plugin_active('woocommerce/woocommerce.php')) {
 								$order = new WC_Order($order_id);	
 								$email = $order->billing_email;
 
-								$optionsSendMail = ['option' => $kiyoh_options, 'email' => $email];								
+								$optionsSendMail = array('option' => $kiyoh_options, 'email' => $email);								
 								kiyoh_createTableKiyoh();
 								global $wpdb;
 								$table_name = $wpdb->prefix . 'kiyoh';
@@ -92,8 +92,7 @@ function check_kiyoh_review($post_id) {
 			$user_id = trim(strip_tags($_POST['customer_user'] ));
 			$user_id = (int)$user_id;
 			if (kiyoh_checkExculeGroups($kiyoh_options['excule_groups'], $user_id) == true) {
-				$optionsSendMail = ['option' => $kiyoh_options, 'email' => $email];
-
+				$optionsSendMail = array('option' => $kiyoh_options, 'email' => $email);
 				kiyoh_createTableKiyoh();
 				global $wpdb;
 				$table_name = $wpdb->prefix . 'kiyoh';
